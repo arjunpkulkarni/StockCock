@@ -9,11 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar__container">
             <a href="/" id="navbar__logo"><i class="fa-solid fa-globe logo-icon"></i><span class="logo-text">Stocklock.</span></a>
+            <form class="search-bar" action="/search" method="GET">
+                <input type="text" name="q" placeholder="Symbol, eg. AAPL">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -42,7 +47,7 @@
             <div class="main__content">
                 <h1>NEXT GENERATION</h1>
                 <h2>STOCK ANALYSIS</h2>
-                <p>See how we turn data into profits.</p>
+                <p id="animated-text"></p>
                 <button class="main__btn"><a href="/">Get Started</a></button>
             </div>
             <div class="main__img--container">
@@ -51,74 +56,282 @@
         </div>
     </div>
     
-<!-- Services Section -->
-<div class="services">
-    <h1>A little bit about Stocklock.</h1>
-    <div class="services__container">
-        <div class="services__card">
-            <h2>What the f#*k is it?</h2>
-            <p>In short, Stocklock. is a data-driven resource aimed to provide advanced stock analysis tools, 
-            by transforming data into actionable investment insights for smarter financial decisions.</p>
-            <div class="services__btn-container">
-                <button class="services__btn">Learn more</button>
+    <!-- Services Section -->
+    <div class="services">
+        <h1>A little bit about Stocklock.</h1>
+        <div class="services__container">
+            <div class="services__card">
+                <h2>What the f#*k is it?</h2>
+                <p>In short, Stocklock. is a data-driven resource aimed to provide advanced stock analysis tools, 
+                by transforming data into actionable investment insights for smarter financial decisions.</p>
+                <div class="services__btn-container">
+                    <button class="services__btn">Learn more</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Footer -->
-<div class="footer__container">
-    <div class="footer__links">
-        <div class="footer__link--wrapper">
-            <div class="footer__link--items">
-                <h2>About Us</h2>
-                <a href="/">How it works</a>
-                <a href="/">Testimonials</a>
-                <a href="/">Careers</a>
-                <a href="/">Investments</a>
-                <a href="/">Terms of Service</a>
-            </div>
-            <div class="footer__link--items">
-                <h2>Contact Us</h2>
-                <a href="/">Contact Support</a>
-                <a href="/">Destinations</a>
-                <a href="/">Sponsorships</a>
-                <a href="/">Investments</a>
-                <a href="/">Terms of Service</a>
-            </div>
-            <div class="footer__link--items">
-                <h2>Social Media</h2>
-                <a href="/">LinkedIn</a>
-                <a href="/">Facebook</a>
-                <a href="/">Twitter</a>
-                <a href="/">Instagram</a>
+    <!-- Footer -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Investments</a>
+                    <a href="/">Terms of Service</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Contact Us</h2>
+                    <a href="/">Contact Support</a>
+                    <a href="/">Destinations</a>
+                    <a href="/">Sponsorships</a>
+                    <a href="/">Investments</a>
+                    <a href="/">Terms of Service</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="/">LinkedIn</a>
+                    <a href="/">Facebook</a>
+                    <a href="/">Twitter</a>
+                    <a href="/">Instagram</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Social Media Section -->
-<section class="social__media">
-    <div class="social__media--wrap">
-        <a href="/" class="social__logo"><i class="fa-solid fa-globe logo-icon"></i>Stocklock.</a>
-        <p class="website__rights">© Stocklock. 2024. All rights reserved.</p>
-        <div class="social__icons">
-            <a href="/" class="social__icon--link" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="/" class="social__icon--link" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="/" class="social__icon--link" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="/" class="social__icon--link" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
+    <!-- Social Media Section -->
+    <section class="social__media">
+        <div class="social__media--wrap">
+            <a href="/" class="social__logo"><i class="fa-solid fa-globe logo-icon"></i>Stocklock.</a>
+            <p class="website__rights">© Stocklock. 2024. All rights reserved.</p>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script src="app.js"></script>
+    <script src="app.js"></script>
+    <script>
+        new TypeIt("#animated-text", {
+            lifeLike: false,
+            speed: 0
+        })
+        .delete(32, {instant: true})
+        .pause(254)
+        .type("S")
+        .pause(162)
+        .type("e")
+        .pause(162)
+        .type("e")
+        .pause(86)
+        .type(" ")
+        .pause(208)
+        .type("h")
+        .pause(98)
+        .type("o")
+        .pause(184)
+        .type("w")
+        .pause(158)
+        .type(" ")
+        .pause(112)
+        .type("w")
+        .pause(141)
+        .type("e")
+        .pause(155)
+        .type(" ")
+        .pause(162)
+        .type("t")
+        .pause(147)
+        .type("u")
+        .pause(123)
+        .type("r")
+        .pause(149)
+        .type("n")
+        .pause(164)
+        .type(" ")
+        .pause(162)
+        .type("d")
+        .pause(94)
+        .type("a")
+        .pause(150)
+        .type("t")
+        .pause(167)
+        .type("a")
+        .pause(149)
+        .type(" ")
+        .pause(193)
+        .type("i")
+        .pause(190)
+        .type("n")
+        .pause(143)
+        .type("t")
+        .pause(127)
+        .type("o")
+        .pause(133)
+        .type(" ")
+        .pause(209)
+        .type("p")
+        .pause(165)
+        .type("r")
+        .pause(179)
+        .type("o")
+        .pause(182)
+        .type("f")
+        .pause(155)
+        .type("i")
+        .pause(150)
+        .type("t")
+        .pause(223)
+        .type("s")
+        .pause(212)
+        .type(".")
+        .pause(668)
+        .delete(1)
+        .pause(183)
+        .delete(1)
+        .pause(204)
+        .delete(1)
+        .pause(193)
+        .delete(1)
+        .pause(207)
+        .delete(1)
+        .pause(224)
+        .delete(1)
+        .pause(272)
+        .delete(1)
+        .pause(245)
+        .delete(1)
+        .pause(341)
+        .type("c")
+        .pause(117)
+        .type("a")
+        .pause(127)
+        .type("s")
+        .pause(152)
+        .type("h")
+        .pause(340)
+        .type(".")
+        .pause(876)
+        .delete(1)
+        .pause(215)
+        .delete(1)
+        .pause(206)
+        .delete(1)
+        .pause(198)
+        .delete(1)
+        .pause(261)
+        .delete(1)
+        .pause(481)
+        .type("b")
+        .pause(228)
+        .type("r")
+        .pause(232)
+        .type("e")
+        .pause(112)
+        .type("a")
+        .pause(267)
+        .type("d")
+        .pause(359)
+        .type(".")
+        .pause(808)
+        .delete(1)
+        .pause(242)
+        .delete(1)
+        .pause(256)
+        .delete(1)
+        .pause(214)
+        .delete(1)
+        .pause(219)
+        .delete(1)
+        .pause(277)
+        .delete(1)
+        .pause(272)
+        .type("c")
+        .pause(113)
+        .type("a")
+        .pause(177)
+        .type("p")
+        .pause(235)
+        .type("i")
+        .pause(164)
+        .type("t")
+        .pause(225)
+        .type("a")
+        .pause(142)
+        .type("l")
+        .pause(295)
+        .type(".")
+        .pause(865)
+        .delete(1)
+        .pause(276)
+        .delete(1)
+        .pause(241)
+        .delete(1)
+        .pause(245)
+        .delete(1)
+        .pause(253)
+        .delete(1)
+        .pause(206)
+        .delete(1)
+        .pause(250)
+        .delete(1)
+        .pause(266)
+        .delete(1)
+        .pause(392)
+        .type("b")
+        .pause(214)
+        .type("a")
+        .pause(112)
+        .type("n")
+        .pause(86)
+        .type("k")
+        .pause(440)
+        .type(".")
+        .pause(1022)
+        .delete(1)
+        .pause(281)
+        .delete(1)
+        .pause(272)
+        .delete(1)
+        .pause(241)
+        .delete(1)
+        .pause(259)
+        .delete(1)
+        .pause(540)
+        .type("b")
+        .pause(101)
+        .type("i")
+        .pause(101)
+        .type("g")
+        .pause(101)
+        .type(" ")
+        .pause(208)
+        .type("b")
+        .pause(141)
+        .type("u")
+        .pause(180)
+        .type("c")
+        .pause(161)
+        .type("k")
+        .pause(207)
+        .type("s")
+        .pause(255)
+        .type(".")
+        .go();
+    </script>
 </body>
 </html>
