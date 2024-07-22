@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocklock</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/95750cbbf5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"><i class="fa-solid fa-globe logo-icon"></i><span class="logo-text">Stocklock.</span></a>
+            <form class="search-bar" action="/search" method="GET">
+                <input type="text" name="q" placeholder="Symbol, eg. AAPL">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">HOME</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/about.html" class="navbar__links">ABOUT</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="faq.html" class="navbar__links">FAQ</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="pricing.html" class="navbar__links">PRICING</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="signin.html" class="button">SIGN UP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>

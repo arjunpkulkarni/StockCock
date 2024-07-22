@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Stocklock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"><i class="fa-solid fa-globe logo-icon"></i><span class="logo-text">Stocklock.</span></a>
+            <form class="search-bar" action="/search" method="GET">
+                <input type="text" name="q" placeholder="Symbol, eg. AAPL">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">HOME</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/about.html" class="navbar__links">ABOUT</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="faq.html" class="navbar__links">FAQ</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="pricing.html" class="navbar__links">PRICING</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="signin.html" class="button">SIGN UP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h2>Sign Up for Stocklock</h2>
+            <p>Join Stocklock for exclusive stock analysis and investment insights!</p>
+            <form action="/submit-signup" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <div class="keep-logged-in">
+                    <input type="checkbox" id="keep-logged-in" name="keep-logged-in">
+                    <label for="keep-logged-in">Keep me logged in (Optional)</label>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="terms">By signing up, you agree to our <a href="#">Terms and Conditions</a>.</p>
+        </div>
+        <div class="signup-container">
+            <div class="signup-box">
+                <h2>Sign Up for Stocklock</h2>
+                <p>Join Stocklock for exclusive stock analysis and investment insights!</p>
+                <form action="/submit-signup" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+    
+                    <div class="keep-logged-in">
+                        <input type="checkbox" id="keep-logged-in" name="keep-logged-in">
+                        <label for="keep-logged-in">Keep me logged in (Optional)</label>
+                    </div>
+    
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p class="terms">By signing up, you agree to our <a href="#">Terms and Conditions</a>.</p>
+            </div>
+    </div>
+</body>
+</html>
+

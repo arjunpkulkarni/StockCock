@@ -15,10 +15,13 @@
     <nav class="navbar">
         <div class="navbar__container">
             <a href="/" id="navbar__logo"><i class="fa-solid fa-globe logo-icon"></i><span class="logo-text">Stocklock.</span></a>
-            <form class="search-bar" action="/search" method="GET">
-                <input type="text" name="q" placeholder="Symbol, eg. AAPL">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+            <div class="search-container">
+                <form class="search-bar" action="/search" method="GET">
+                    <input type="text" id="search-input" name="q" placeholder="Symbol, eg. AAPL">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <div id="suggestions" class="suggestions hidden"></div>
+            </div>
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -29,13 +32,16 @@
                     <a href="/" class="navbar__links">HOME</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/tech.html" class="navbar__links">ABOUT</a>
+                    <a href="/about.html" class="navbar__links">ABOUT</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links">PRODUCTS</a>
+                    <a href="faq.html" class="navbar__links">FAQ</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="pricing.html" class="navbar__links">PRICING</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="/" class="button">SIGN UP</a>
+                    <a href="signin.html" class="button">SIGN UP</a>
                 </li>
             </ul>
         </div>
